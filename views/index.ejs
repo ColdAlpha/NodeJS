@@ -1,0 +1,42 @@
+<form action="/" method="POST">
+    <table>
+        <tr>
+            <td>Nama</td>
+            <td><input type="text" name="nama" required /></td>
+        </tr>
+        <tr>
+            <td>Nomor HP</td>
+            <td><input type="text" name="nohp" required /></td>
+        </tr>
+        <tr style="text-align: center;">
+            <td colspan="2"><button type="submit">Tambah Data</button></td>
+        </tr>
+    </table>
+</form>
+
+<table>
+    <tr style="text-align: center;">
+        <td>Nama</td>
+        <td>Nomor HP</td>
+        <td colspan="3">Aksi</td>
+    </tr>
+    <% kontak.forEach((kn, index) => { %>
+        <tr>
+            <td>
+                <%= kn.nama %>
+            </td>
+            <td>
+                <%= kn.nohp %>
+            </td>
+            <td>
+                <a href="/<%= kn.id %>"> <button>DETAIL</button></a>
+            </td>
+            <td>
+                <a href="/<%= kn.id %>/edit"> <button>EDIT</button></a>
+            </td>
+            <td>
+                <a href="/<%= kn.id %>/delete"> <button>HAPUS</button></a>
+            </td>
+        </tr>
+        <% }) %>
+</table>

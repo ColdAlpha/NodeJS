@@ -1,0 +1,15 @@
+<form action="/<%=kontak.id %>/edit" method="POST">
+    <table>
+        <tr>
+            <td>Nama</td>
+            <td><input type="text" name="nama" value="<%=kontak.nama %>" required /></td>
+        </tr>
+        <tr>
+            <td>Nomor HP</td>
+            <td><input type="text" name="nohp" value="<%=kontak.nohp %>" required /></td>
+        </tr>
+        <tr style="text-align: center;">
+            <td colspan="2"><button type="submit">Edit</button></td>
+        </tr>
+    </table>
+</form>
